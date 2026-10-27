@@ -16,12 +16,16 @@ interface LoadingType {
 export const LoadingContext = createContext<LoadingType | null>(null);
 
 export const LoadingProvider = ({ children }: PropsWithChildren) => {
-  const [isLoading, setIsLoading] = useState(() => {
-    // Skip loading on mobile
+  const [isLoading, setIsLoadingState] = useState(() => {
     if (window.innerWidth <= 768) return false;
-    return true;
+    return sessionStorage.getItem("portfolio-loader-complete") !== "true";
   });
   const [loading, setLoading] = useState(0);
+
+  const setIsLoading = (state: boolean) => {
+    if (!state) sessionStorage.setItem("portfolio-loader-complete", "true");
+    setIsLoadingState(state);
+  };
 
   const value = {
     isLoading,
@@ -29,7 +33,6 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
     setLoading,
   };
   useEffect(() => {
-    // Auto-start animations on mobile since there's no 3D model
     if (window.innerWidth <= 768) {
       import("../components/utils/initialFX").then((module) => {
         if (module.initialFX) {

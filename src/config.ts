@@ -8,14 +8,22 @@ export const config = {
   social: { email: "careerabithan@gmail.com", location: "Coimbatore, India", phone: "+91 7339096324" },
   about: {
     title: "About Me",
-    description: "I am a Python-focused Software Developer and Generative AI Engineer with 2+ years of experience in AI-enabled applications, backend services, automation workflows, and cloud deployment. I work with LLM integrations, LangChain, LangGraph, Anthropic Claude API, FastAPI, REST APIs, Docker, AWS, MongoDB, and PostgreSQL. I enjoy turning complex workflows into reliable, scalable products.",
+    description: "Python Developer and Generative AI Engineer building AI-enabled applications, automation workflows, backend services, and cloud-ready products.",
   },
-  experiences: [{
-    position: "Junior Software Developer", company: "SNS Square - Coimbatore", period: "Sep 2024 - Present", location: "Coimbatore, India",
-    description: "Building AI-powered automation, full-stack features, and cloud-ready services that improve operational efficiency and product reliability.",
-    responsibilities: ["Engineered Python and LangChain automation that improved operational efficiency by 50%", "Developed backend and full-stack features with Python, REST APIs, Node.js, React.js, and MERN", "Reduced AI video processing time from 30 minutes to 9 seconds with Python and Docker", "Built Docker containers for deployment on AWS EC2, ECS, and S3", "Resolved 70+ high-priority full-stack defects"],
-    technologies: ["Python", "LangChain", "FastAPI", "React", "Docker", "AWS"],
-  }],
+  experiences: [
+    {
+      position: "Junior Software Developer", company: "SNS Square - Coimbatore", period: "Sep 2024 - Present", location: "Coimbatore, India",
+      description: "Building AI-powered automation, full-stack features, and cloud-ready services that improve operational efficiency and product reliability.",
+      responsibilities: ["Engineered Python and LangChain automation that improved operational efficiency by 50%", "Developed backend and full-stack features with Python, REST APIs, Node.js, React.js, and MERN", "Reduced AI video processing time from 30 minutes to 9 seconds with Python and Docker", "Built Docker containers for deployment on AWS EC2, ECS, and S3", "Resolved 70+ high-priority full-stack defects"],
+      technologies: ["Python", "LangChain", "FastAPI", "React", "Docker", "AWS"],
+    },
+    {
+      position: "Software Development Intern", company: "SNS Square - Coimbatore", period: "2024", location: "Coimbatore, India",
+      description: "Contributed to AI automation and product-development initiatives, earning recognition as Most Innovative Intern of the Year.",
+      responsibilities: ["Supported AI automation solutions", "Contributed to core product development", "Collaborated on cloud deployment work"],
+      technologies: ["Python", "Generative AI", "Docker", "AWS"],
+    },
+  ],
   projects: [
     { id: 1, title: "AI Workflow Automation System", category: "Generative AI / Automation", technologies: "Python, LangChain, Generative AI, REST APIs, Docker, AWS", image: "/images/placeholder.webp", description: "An AI-powered workflow automation solution that streamlines operational processes, reduces repetitive manual work, and improves business workflow efficiency.", link: "" },
     { id: 2, title: "AI-Powered Multi-Agent Research Assistant", category: "Generative AI / Multi-Agent Systems", technologies: "Python, LangGraph, LangChain, Anthropic Claude API, FastAPI, Docker, AWS EC2", image: "/images/placeholder.webp", description: "A multi-agent research assistant for retrieving, summarizing, and synthesizing information from multiple sources, with real-time streaming responses.", link: "" },

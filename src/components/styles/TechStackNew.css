@@ -77,12 +77,21 @@
   text-align: center;
   font-weight: 400;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 12px;
   background: linear-gradient(180deg, #ffffff 0%, #c2a4ff 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+}
+
+.techstack-intro {
+  max-width: 600px;
+  margin: 0 auto 42px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 /* Pyramid Container */
@@ -131,14 +140,24 @@
   width: 30px;
   height: 30px;
   object-fit: contain;
-  filter: grayscale(100%) contrast(1.2) brightness(1.5);
-  opacity: 0.85;
+  opacity: 1;
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
 .techstack-item:hover img {
-  filter: none;
-  opacity: 1;
+  transform: scale(1.08);
+}
+
+.tech-logo-fallback {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--accentColor);
+  color: #130d19;
+  font-size: 10px;
+  font-weight: 700;
 }
 
 .techstack-item span {
@@ -182,6 +201,10 @@
     font-size: 50px;
     margin-bottom: 35px;
   }
+
+  .techstack-intro {
+    margin-bottom: 30px;
+  }
   
   .techstack-pyramid {
     gap: 8px;
@@ -211,6 +234,11 @@
 @media screen and (max-width: 600px) {
   .techstack-content h2 {
     font-size: 36px;
+  }
+
+  .techstack-intro {
+    font-size: 13px;
+    margin-bottom: 25px;
   }
   
   .techstack-pyramid {
